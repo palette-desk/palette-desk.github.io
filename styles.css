@@ -23,6 +23,7 @@ body {
   color: var(--ink);
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 a {
@@ -37,7 +38,8 @@ select {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .site-header {
@@ -58,6 +60,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -93,6 +96,7 @@ img {
   color: #2e2f2c;
   font-weight: 600;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .nav a:hover {
@@ -147,6 +151,10 @@ img {
   gap: 28px;
 }
 
+.main-content {
+  min-width: 0;
+}
+
 .article-intro h1 {
   margin: 0 0 6px;
   font-size: clamp(24px, 2.2vw, 32px);
@@ -196,6 +204,7 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
+  min-width: 0;
 }
 
 .static-kicker {
@@ -240,6 +249,18 @@ img {
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.contact-line-button {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
+.contact-line-button img {
+  width: auto;
+  max-width: min(100%, 180px);
+  height: 36px;
 }
 
 .text-button {
@@ -541,6 +562,7 @@ img {
   border: 1px solid #d7d5cf;
   border-radius: var(--radius);
   background: var(--paper);
+  min-width: 0;
 }
 
 .product-card .badge {
@@ -553,7 +575,8 @@ img {
 }
 
 .product-image {
-  height: 134px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin-bottom: 12px;
   border-radius: 6px;
   background: #f1f0eb;
@@ -917,15 +940,88 @@ img {
 
 @media (max-width: 560px) {
   .page {
-    padding-inline: 14px;
+    padding-inline: 12px;
   }
 
   .site-header {
-    padding-inline: 14px;
+    padding-inline: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-width: 2px;
+    font-size: 18px;
+    flex: 0 0 auto;
+  }
+
+  .brand strong {
+    font-size: 18px;
+  }
+
+  .brand small {
+    font-size: 11px;
+  }
+
+  .nav {
+    gap: 20px;
+    padding-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .static-page {
+    padding: 22px 12px 40px;
+  }
+
+  .static-card {
+    padding: 22px 16px;
+  }
+
+  .static-card h1 {
+    font-size: 28px;
+  }
+
+  .static-card h2 {
+    font-size: 18px;
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card .badge {
+    left: 10px;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .product-image {
+    margin-bottom: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 13px;
+  }
+
+  .price,
+  .stars,
+  .shop-buttons a {
+    font-size: 12px;
+  }
+
+  .shop-buttons a {
+    min-height: 32px;
   }
 
   .legend {
