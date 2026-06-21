@@ -17,6 +17,13 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 0;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -198,6 +205,7 @@ img {
 }
 
 .static-card {
+  width: min(100%, 920px);
   max-width: 920px;
   margin: 0 auto;
   padding: clamp(26px, 4vw, 48px);
@@ -233,6 +241,8 @@ img {
 .static-card p {
   margin: 0 0 14px;
   color: #3a3d38;
+  font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .static-card ul {
@@ -242,6 +252,8 @@ img {
 
 .static-card li {
   margin: 7px 0;
+  font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .static-card a {
