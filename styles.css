@@ -324,6 +324,11 @@ img {
   aspect-ratio: 16 / 10;
 }
 
+img.tile-image {
+  width: 100%;
+  object-fit: cover;
+}
+
 .category-tile.compact .tile-image {
   aspect-ratio: 1 / 1;
 }
@@ -441,6 +446,7 @@ img {
 
 .layout-list-cards {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px;
 }
 
@@ -1391,6 +1397,10 @@ img {
 
   .listing-page {
     padding-inline: 14px;
+  }
+
+  .layout-list-cards {
+    grid-template-columns: 1fr;
   }
 }
 
