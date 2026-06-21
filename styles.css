@@ -185,6 +185,76 @@ img {
   color: var(--green-dark);
 }
 
+.static-page {
+  padding: 36px clamp(20px, 4vw, 72px) 56px;
+}
+
+.static-card {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(26px, 4vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.static-kicker {
+  margin: 0 0 8px;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.static-card h1 {
+  margin: 0 0 18px;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.25;
+}
+
+.static-card h2 {
+  margin: 34px 0 10px;
+  padding-left: 12px;
+  border-left: 4px solid var(--green);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.static-card p {
+  margin: 0 0 14px;
+  color: #3a3d38;
+}
+
+.static-card ul {
+  margin: 0 0 14px;
+  padding-left: 1.4em;
+}
+
+.static-card li {
+  margin: 7px 0;
+}
+
+.static-card a {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--green-dark);
+  border-radius: 5px;
+  background: var(--green-dark);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 .visual-card {
   margin-top: 12px;
 }
@@ -566,6 +636,39 @@ img {
   font-size: 12px;
 }
 
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 28px clamp(20px, 3vw, 52px);
+  border-top: 1px solid var(--line);
+  background: #f0eee8;
+  color: #343631;
+}
+
+.site-footer strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 18px;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .left-sidebar,
 .right-sidebar {
   display: grid;
@@ -801,6 +904,14 @@ img {
     height: auto;
     aspect-ratio: 16 / 10;
     min-height: 260px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
   }
 }
 
