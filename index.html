@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Palette Desk | PCルームとデスク周りのレイアウト集</title>
-  <link rel="stylesheet" href="styles.css?v=20260622-category-icons">
+  <link rel="stylesheet" href="styles.css?v=20260622-features">
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +17,7 @@
     </a>
     <nav class="nav" aria-label="メインナビゲーション">
       <a href="#layouts">レイアウト集</a>
+      <a href="feature-list.html">特集</a>
       <a href="#items">アイテムカテゴリー</a>
       <a href="about.html">運営者情報</a>
       <a href="contact.html">お問い合わせ</a>
@@ -30,12 +31,21 @@
   <main class="home-page">
     <section class="home-hero">
       <p class="home-kicker">PR / アフィリエイトリンクを含みます</p>
-      <h1>PCルームを、見て選べるレイアウト集。</h1>
+      <h1>PCルームを、見て選べる<br class="mobile-title-break">レイアウト集。</h1>
       <p>ゲーミングルーム、書斎、ワークスペース向けの部屋づくりを、レイアウト例と購入候補アイテムから探せるサイトです。</p>
     </section>
 
+    <section class="feature-card feature-card-mobile" aria-label="特集">
+      <h2><a href="feature-list.html">特集</a></h2>
+      <div class="feature-title-list" data-feature-list data-feature-limit="3"></div>
+    </section>
     <div class="home-shell">
       <aside class="home-sidebar" aria-label="サイドメニュー">
+        <section class="side-card feature-card feature-card-desktop" aria-label="特集">
+          <h2><a href="feature-list.html">特集</a></h2>
+          <div class="feature-title-list" data-feature-list data-feature-limit="3"></div>
+        </section>
+
         <section class="side-card theme-nav">
           <h2>注目テーマ</h2>
           <a href="layout-list.html?type=gaming"><span>01</span> ゲーミングルーム</a>
@@ -160,5 +170,6 @@
       <a href="advertising.html">広告・アフィリエイトについて</a>
     </nav>
   </footer>
+  <script src="features.js?v=20260622-features"></script>
 </body>
 </html>

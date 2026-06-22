@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>お問い合わせ | Palette Desk</title>
+  <title>特集一覧 | Palette Desk</title>
   <link rel="stylesheet" href="styles.css?v=20260622-features">
+  <script src="features.js?v=20260622-features" defer></script>
 </head>
-<body>
+<body data-page="feature-list">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Palette Desk トップ">
       <img class="brand-mark" src="assets/palette-desk.png?v=20260622-icon2" alt="" aria-hidden="true">
@@ -24,32 +25,20 @@
     </nav>
   </header>
 
-  <main class="static-page">
-    <article class="static-card">
-      <p class="static-kicker">Contact</p>
-      <h1>お問い合わせ</h1>
-      <p>Palette Deskへのご連絡、掲載内容に関するご指摘、広告掲載に関するお問い合わせは、以下の窓口からお願いいたします。</p>
+  <main class="listing-page feature-archive-page">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span>＞</span>
+      <span>特集一覧</span>
+    </nav>
 
-      <section>
-        <h2>お問い合わせ先</h2>
-        <p>当サイトへのお問い合わせは、LINEからお願いいたします。内容を確認のうえ、必要に応じて返信いたします。</p>
-        <p>
-          <a class="contact-line-button" href="https://lin.ee/PmLZMpz" target="_blank" rel="noopener" aria-label="LINEで問い合わせ">
-            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINEで問い合わせ" height="36" border="0">
-          </a>
-        </p>
-      </section>
+    <header class="listing-heading feature-list-heading">
+      <p class="static-kicker">FEATURE</p>
+      <h1>特集一覧</h1>
+      <p>PCルームづくりで読みたいテーマ別の記事をまとめています。</p>
+    </header>
 
-      <section>
-        <h2>ご連絡時のお願い</h2>
-        <ul>
-          <li>該当ページのURL</li>
-          <li>お問い合わせ内容</li>
-          <li>返信が必要な場合の連絡先</li>
-        </ul>
-        <p>内容によっては返信できない場合があります。あらかじめご了承ください。</p>
-      </section>
-    </article>
+    <section class="feature-list-grid" data-feature-archive aria-label="特集記事一覧"></section>
   </main>
 
   <footer class="site-footer">
